@@ -28,15 +28,14 @@ function getComplexRoots(a, b, discriminant) {
   const realPart = -b / (2 * a);
   const imaginaryPart = Math.sqrt(-1 * discriminant) / (2 * a);
 
-  const firstRoot = realPart + ' + ' + imaginaryPart + 'i';
-  const secondRoot = realPart + ' - ' + imaginaryPart + 'i';
+  const firstRoot = `${realPart} + ${imaginaryPart}i`;
+  const secondRoot = `${realPart} - ${imaginaryPart}i`;
 
   return concatenateRoots(firstRoot, secondRoot);
 }
 
 function concatenateRoots(firstRoot, secondRoot) {
-  return firstRoot + ', ' + secondRoot;
+  return `${firstRoot}, ${secondRoot}`;
 }
 
 console.log(solveQuadraticEquation(1, -1, -2)); // -1, 2
-
