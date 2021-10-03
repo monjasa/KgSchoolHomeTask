@@ -1,0 +1,3 @@
+<app-child-component [firstName]="firstName" (lastNameChange)="onFullNameChange($event)"></app-child-component>
+
+<p *ngIf="fullName">Full Name: {{fullName}}</p>
