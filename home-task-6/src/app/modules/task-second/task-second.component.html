@@ -1,0 +1,14 @@
+<div class="container-fluid">
+  <div>
+    <h3>HEX</h3>
+    <label for="hexColor">Code: </label>
+    <input id="hexColor" type="text" [formControl]="hexColor" maxlength="7">
+  </div>
+
+  <div>
+    <h3>RGB</h3>
+    <app-rgb-color-form [color]="hexColorValue ? (hexColorValue | hexToRgb) : undefined"></app-rgb-color-form>
+  </div>
+</div>
+
+

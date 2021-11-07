@@ -1,0 +1,35 @@
+<div class="container-fluid">
+  <h1>Sign Up</h1>
+  <form class="row g-3" [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
+    <div class="col-md-6">
+      <label for="firstName" class="form-label">First Name</label>
+      <input type="text" class="form-control" formControlName="firstName" id="firstName">
+    </div>
+    <div class="col-md-6">
+      <label for="lastName" class="form-label">Last Name</label>
+      <input type="text" class="form-control" formControlName="lastName" id="lastName">
+    </div>
+    <div class="col-md-6">
+      <label for="phone" class="form-label">Phone</label>
+      <input type="tel" class="form-control" formControlName="phone" id="phone">
+    </div>
+    <div class="col-md-6">
+      <label for="email" class="form-label">Email</label>
+      <input type="email" class="form-control" formControlName="email" id="email">
+    </div>
+    <div class="col-md-12 form-group row" formGroupName="passwords">
+      <div class="col-md-6">
+        <label for="password" class="form-label">Password</label>
+        <input type="password" class="form-control" formControlName="password" id="password">
+      </div>
+      <div class="col-md-6">
+        <label for="passwordConfirmation" class="form-label">Confirm Password</label>
+        <input type="password" class="form-control" formControlName="passwordConfirmation" id="passwordConfirmation">
+      </div>
+    </div>
+
+    <div class="d-grid col-12">
+      <button type="submit" class="btn btn-primary btn-lg" [disabled]="!signUpForm.valid">Sign Up</button>
+    </div>
+  </form>
+</div>
